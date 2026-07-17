@@ -522,7 +522,11 @@ def main():
         patients,
         start=1,
     ):
-        prompt = who.build_prompt(condition, audit_scenario)
+        prompt = who.build_prompt(condition, audit_scenario) # TASK / PROMPT (from auditcode_who_audit.py build_prompt):
+# Ask GPT for the most clinically appropriate first thing to say to the
+# patient, given their real HAC comorbidities and a fixed WHO Zone IV
+# AUDIT profile (score 25, Referral to Specialist). Output must be only
+# the exact words spoken to the patient — no extra explanation.
         prompt_sha256 = hashlib.sha256(
             prompt.encode("utf-8")
         ).hexdigest()
