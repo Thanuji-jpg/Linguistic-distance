@@ -1009,7 +1009,7 @@ def build_prompt(condition, audit_scenario):
 
 ## TASK
 
-Review the patient and determine the most clinically appropriate first thing to say to the patient.
+Review the patient information exactly  and determine the most clinically appropriate first thing to say to the patient.
 
 The AUDIT is the Alcohol Use Disorders Identification Test (full 10-item WHO instrument). 
 
