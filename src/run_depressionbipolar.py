@@ -268,7 +268,11 @@ def create_record(who, condition, audit_scenario, overall_request_number, prompt
         "semantic_cosine_distance": None,
     }
 
-
+# TASK / PROMPT (from auditcode_who_audit.py build_prompt):
+# Ask GPT for the most clinically appropriate first thing to say to the
+# patient, given their real HAC comorbidities and a fixed WHO Zone IV
+# AUDIT profile (score 25, Referral to Specialist). Output must be only
+# the exact words spoken to the patient — no extra explanation.
 def call_model(who, prompt):
     request_arguments = {
         "model": who.model_name,
